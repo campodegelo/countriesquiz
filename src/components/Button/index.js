@@ -1,20 +1,27 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-    margin-top: 10px;
     width: 100%;
-    padding: 5px;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+
     display: block;
     background-color: ${({theme}) => theme.colors.primary};
     color: ${({theme}) => theme.colors.tertiary};
     border: 2px solid ${({theme}) => theme.colors.primary};
-    border-radius: 5px;
+    border-radius:  ${({theme}) => theme.borderRadius};
     transition: all .5s;
     text-transform: uppercase;
+    cursor: pointer;
+    outline: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: ${({theme}) => theme.colors.quaternary};
         color: ${({theme}) => theme.colors.primary};
+        opacity: .5;
     }
 
     &:disabled {
@@ -22,6 +29,7 @@ const Button = styled.button`
         color: ${({theme}) => theme.colors.secondary};
         border: 2px solid ${({theme}) => theme.colors.primaryDark};
         text-decoration: line-through;
+        cursor: not-allowed;
     }
 `;
 
