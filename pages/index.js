@@ -1,17 +1,13 @@
+import React, {useState} from 'react';
 import styled from "styled-components";
 import db from "../db.json";
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizLogo from '../src/components/QuizLogo';
-import Widget from '../src/components/Widget';
-
-const BackgroundImage = styled.div`
-  background-image: url(${db.bg});
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-`;
+import { useRouter } from "next/router";
+import Button from '../src/components/Button';
+import Footer from "../src/components/Footer";
+import GitHubCorner from "../src/components/GitHubCorner";
+import QuizBackground from "../src/components/QuizBackground";
+import QuizLogo from "../src/components/QuizLogo";
+import Widget from "../src/components/Widget";
 
 const QuizContainer = styled.div`
   width: 100%;
@@ -25,19 +21,38 @@ const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = useState("");
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
-          <Widget.Header><h1>The Quiz of All Nations</h1></Widget.Header>
-          <Widget.Content><p>lorem ipsum</p></Widget.Content>
+          <Widget.Header>
+            <h1>Teste seus conhecimentos sobre o mundo</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                name = event.target.value;
+                router.push(`/quiz?name=${name}`);
+              }}
+            >
+              <input placeholder="Digite seu nome" name="name" style={{width: "100%"}} onChange={(event) => {
+                setName(event.target.value);
+              }}></input>
+              <Button type="submit" disabled={name.length === 0}>Jogar {name}</Button>
+            </form>
+          </Widget.Content>
         </Widget>
         <Widget>
-          <Widget.Content></Widget.Content>
+          <Widget.Content />
         </Widget>
-        <Footer></Footer>
+        <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/campodegelo"></GitHubCorner>
+      <GitHubCorner projectUrl="https://github.com/campodegelo" />
     </QuizBackground>
   );
 }
