@@ -8,7 +8,7 @@
       "image": "https://eisfeld-bucket.s3.amazonaws.com/quirguistao-montanhas.jpg",
       "title": "Qual é a capital do Quirguistão?",
       "description": "Ásia",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
         "Almaty",
         "Bishkek",
@@ -20,10 +20,10 @@
       "image": "https://eisfeld-bucket.s3.amazonaws.com/oslo.jpg",
       "title": "Qual país possui o maior número de túneis rodoviários do mundo?",
       "description": "",
-      "answer": 1,
+      "answer": 0,
       "alternatives": [
-        "Estados Unidos",
         "Noruega",
+        "Estados Unidos",
         "China",
         "Rússia"
       ]
@@ -116,7 +116,7 @@
       "image": "https://eisfeld-bucket.s3.amazonaws.com/berlin.jpg",
       "title": "Quando o Muro de Berlim foi derrubado?",
       "description": "Europa",
-      "answer": 3,
+      "answer": 2,
       "alternatives": [
         "1975",
         "1987",
@@ -140,7 +140,7 @@
       "quaternary": "#000000",
       "mainBg": "#171B35",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
+      "wrong": "#FF0000",
       "success": "#4CAF50"
     },
     "borderRadius": "4px"

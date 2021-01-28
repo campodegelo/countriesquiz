@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import db from "../db.json";
 import { useRouter } from "next/router";
+import AlternativesForm from '../src/components/AlternativesForm';
 import Button from "../src/components/Button";
 import Footer from "../src/components/Footer";
 import Input from "../src/components/Input";
@@ -12,6 +13,7 @@ import QuizContainer from "../src/components/QuizContainer";
 import QuizLogo from "../src/components/QuizLogo";
 import Widget from "../src/components/Widget";
 import QuestionWidget from "../src/components/QuestionWidget";
+import ResultWidget from "../src/components/ResultWidget";
 
 const screenStates = {
   QUIZ: "QUIZ",
@@ -21,16 +23,25 @@ const screenStates = {
 
 export default function Quiz() {
   const questions = db.questions;
+  const [results, setResults] = useState([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const currentQuestion = questions[questionIndex];
   const totalQuestions = questions.length;
   const [screenState, setScreenState] = useState(screenStates.LOADING);
+
+  const addResult = (result) => {
+    setResults([
+      ...results,
+      result
+    ])
+  }
 
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
     }, 3000);
   }, []);
+
 
   const handleSubmitQuiz = () => {
     const nextQuestion = questionIndex + 1;
@@ -51,6 +62,7 @@ export default function Quiz() {
             question={currentQuestion}
             totalQuestions={totalQuestions}
             questionIndex={questionIndex + 1}
+            addResult={addResult}
             onSubmit={handleSubmitQuiz}
           />
         )}
@@ -58,7 +70,7 @@ export default function Quiz() {
           <LoadingWidget ></LoadingWidget>
         )}
 
-        {screenState === screenStates.RESULT && <div>Parabéns</div>}
+        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
         <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/campodegelo" />
