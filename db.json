@@ -1,49 +1,148 @@
 {
-    "bg": "https://eisfeld-bucket.s3.amazonaws.com/hormuz.JPG",
-    "title": "Quiz de Nacionalidades",
-    "description": "Teste seus conhecimentos sobre os países e suas culturas",
-    "questions": [
-      {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
-        "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
-        ]
-      },
-      {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
-        "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
-        ]
-      }
-    ],
-    "external": [
-      ""
-    ],
-    "theme": {
-      "colors": {
-        "primary": "#ff5722",
-        "primaryLight": "#ff784e",
-        "primaryDark": "#b23c17",
-        "secondary": "#ffc400",
-        "secondaryLight": "#ffcf33",
-        "secondaryDark": "#b28900",
-        "tertiary": "#FFFFFF",
-        "quaternary": "#000000",
-        "mainBg": "#171B35",
-        "contrastText": "#FFFFFF",
-        "wrong": "#FF5722",
-        "success": "#4CAF50"
-      },
-      "borderRadius": "4px"
+  "bg": "https://eisfeld-bucket.s3.amazonaws.com/hormuz.JPG",
+  "loading": "https://eisfeld-bucket.s3.amazonaws.com/wedge.gif",
+  "title": "Quiz de Nacionalidades",
+  "description": "Teste seus conhecimentos sobre os países e suas culturas",
+  "questions": [
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/quirguistao-montanhas.jpg",
+      "title": "Qual é a capital do Quirguistão?",
+      "description": "Ásia",
+      "answer": 2,
+      "alternatives": [
+        "Almaty",
+        "Bishkek",
+        "Tashkent",
+        "Ulan Bator"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/oslo.jpg",
+      "title": "Qual país possui o maior número de túneis rodoviários do mundo?",
+      "description": "",
+      "answer": 1,
+      "alternatives": [
+        "Estados Unidos",
+        "Noruega",
+        "China",
+        "Rússia"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/iran.jpg",
+      "title": "Em que ano aconteceu a Revolução Islâmica no Irã?",
+      "description": "Ásia",
+      "answer": 3,
+      "alternatives": [
+        "1945",
+        "1964",
+        "1970",
+        "1979"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/seoul.jpg",
+      "title": "Qual moeda é utilzada na Coréia do Sul?",
+      "description": "Ásia",
+      "answer": 2,
+      "alternatives": [
+        "Ien",
+        "Yuan",
+        "Won",
+        "Dólar Coreano"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/daguestao.jpg",
+      "title": "Qual é a montanha mais alta da Europa?",
+      "description": "Europa",
+      "answer": 3,
+      "alternatives": [
+        "Mont Blanc - França",
+        "Matterhorn - Suíça",
+        "Dolomites - Itália",
+        "Monte Elbrus - Rússia"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/bagan.jpg",
+      "title": "Qual é a capital de Myanmar, antiga Birmânia?",
+      "description": "Ásia",
+      "answer": 0,
+      "alternatives": [
+        "Naypyidaw",
+        "Bagan",
+        "Yangon",
+        "Mandalay"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/copenhagen.jpeg",
+      "title": "Qual a nacionalidade do escritor de A Pequena Sereia, O Patinho Feio, A Branca de Neve, entre outros?",
+      "description": "Europa",
+      "answer": 2,
+      "alternatives": [
+        "Sueca",
+        "Finlandesa",
+        "Dinamarquesa",
+        "Norueguesa"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/caxemira.jpg",
+      "title": "Qual é a maior cidade (em população) da Índia?",
+      "description": "Ásia",
+      "answer": 1,
+      "alternatives": [
+        "Calcutá",
+        "Mumbai",
+        "Nova Déli",
+        "Bangalore"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/angkor.jpg",
+      "title": "Qual é o idioma oficial do Cambodia?",
+      "description": "Ásia",
+      "answer": 1,
+      "alternatives": [
+        "Cambojano",
+        "Khmer",
+        "Laosiano",
+        "Inglês"
+      ]
+    },
+    {
+      "image": "https://eisfeld-bucket.s3.amazonaws.com/berlin.jpg",
+      "title": "Quando o Muro de Berlim foi derrubado?",
+      "description": "Europa",
+      "answer": 3,
+      "alternatives": [
+        "1975",
+        "1987",
+        "1989",
+        "1991"
+      ]
     }
+  ],
+  "external": [
+    ""
+  ],
+  "theme": {
+    "colors": {
+      "primary": "#ff5722",
+      "primaryLight": "#ff784e",
+      "primaryDark": "#b23c17",
+      "secondary": "#ffc400",
+      "secondaryLight": "#ffcf33",
+      "secondaryDark": "#b28900",
+      "tertiary": "#FFFFFF",
+      "quaternary": "#000000",
+      "mainBg": "#171B35",
+      "contrastText": "#FFFFFF",
+      "wrong": "#FF5722",
+      "success": "#4CAF50"
+    },
+    "borderRadius": "4px"
   }
+}

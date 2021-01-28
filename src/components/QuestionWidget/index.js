@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button";
 import Widget from "../Widget";
 
-function QuestionWidget({ question, totalQuestions, questionIndex }) {
+function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit }) {
   const questionId = `question__${questionIndex}`;
   return (
     <Widget key={questionIndex}>
@@ -20,17 +20,20 @@ function QuestionWidget({ question, totalQuestions, questionIndex }) {
         <h2>{question.title}</h2>
         <p>{question.description}</p>
       </Widget.Content>
-      <form>
+      <form onSubmit={(event) => {
+        event.preventDefault();
+        onSubmit();
+      }}>
         {question.alternatives.map((alternative, index) => {
           const alternativeId = `alternative__${index}`;
           return (
-            <Widget.Topic as="label" htmlFor={alternativeId}>
+            <Widget.Topic as="label" htmlFor={alternativeId} key={alternativeId}>
               <input id={alternativeId} type="radio" name={questionId} style={{display: 'none'}}/>
               {alternative}
             </Widget.Topic>
           );
         })}
-        <Button>Confirmar</Button>
+        <Button type="submit">Confirmar</Button>
       </form>
     </Widget>
   );
