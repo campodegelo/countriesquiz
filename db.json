@@ -1,5 +1,6 @@
 {
   "bg": "https://eisfeld-bucket.s3.amazonaws.com/hormuz.JPG",
+  "logo": "https://eisfeld-bucket.s3.amazonaws.com/logo-cdg.PNG",
   "loading": "https://eisfeld-bucket.s3.amazonaws.com/wedge.gif",
   "title": "Quiz de Nacionalidades",
   "description": "Teste seus conhecimentos sobre os países e suas culturas",
@@ -126,7 +127,10 @@
     }
   ],
   "external": [
-    ""
+    "https://aluraquiz-css.omariosouto.vercel.app/",
+    "https://aluraquiz-marvel.omariosouto.vercel.app/",
+    " https://lotr-quiz.filipe1309.vercel.app/"
+
   ],
   "theme": {
     "colors": {

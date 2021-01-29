@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import Widget from "../Widget";
+import BackLinkArrow from '../BackLinkArrow';
 import AlternativesForm from '../AlternativesForm';
 
 function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, addResult }) {
@@ -13,6 +14,7 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
   return (
     <Widget key={questionIndex}>
       <Widget.Header>
+        <BackLinkArrow href='/'></BackLinkArrow>
         <h3>
           Pergunta {questionIndex} de {totalQuestions}
         </h3>
@@ -31,6 +33,9 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
           event.preventDefault();
           setIsQuestionSubmited(true);
           addResult(isCorrect);
+
+          // logica para checar se houve acerto, e caso negativo, mostrar a certa
+
           setTimeout(() => {
             onSubmit();
             setIsQuestionSubmited(false);
