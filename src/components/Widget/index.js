@@ -18,6 +18,9 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
+  @media screen and (max-width: 500px) {
+    margin-top: 6rem;
+  }
 `;
 
 Widget.Header = styled.header`

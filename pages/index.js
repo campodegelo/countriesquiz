@@ -53,7 +53,7 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
-        <Widget
+        {/* <Widget
           as={motion.section}
           variants={{
             show: { opacity: 1, x: '0' },
@@ -92,8 +92,8 @@ export default function Home() {
                 );
               })}
             </ul>
-          </Widget.Content>
-        </Widget>
+          </Widget.Content> */}
+        {/* </Widget> */}
         <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/campodegelo" />

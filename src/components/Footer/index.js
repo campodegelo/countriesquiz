@@ -8,7 +8,7 @@ const FooterWrapper = styled.footer`
   align-items: center;
   border-radius: 4px; 
   img {
-    width: 58px;
+    width: 70px;
     margin-right: 23px;
   }
   a {
@@ -29,16 +29,14 @@ export default function Footer(props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <a href="https://www.campodegelo.com/">
+        <img src="https://eisfeld-bucket.s3.amazonaws.com/globe-white.png" alt="Logo Campo de Gelo" />
       </a>
       <p>
-        Orgulhosamente criado durante
+        Fotos autorais.<br></br> Fatos contados por locais. <br></br>
         {' '}
-        a
-        {' '}
-        <a href="https://www.alura.com.br/">
-          <span>Imersão React da Alura</span>
+        <a href="https://www.campodegelo.com">
+          <span>Histórias. Relatos. Devaneios</span>
         </a>
       </p>
     </FooterWrapper>
